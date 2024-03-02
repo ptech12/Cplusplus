@@ -109,28 +109,36 @@ void print7(int n)
         cout << endl;
     }
 }
-void print7(int n)
+
+
+void print8(int n)
 {
     for (int i = 0; i < n; i++)
     {
         // space
-        for (int j = 0; j < (n - i - 1); j++)
+        for (int j = 0; j < i; j++)
         {
             cout << " ";
         }
 
         // stars
-        for (int j = 0; j < (i * 2 + 1); j++)
+        for (int j = 0; j < (2 * n) - (i * 2 + 1); j++)
         {
             cout << "*";
         }
         // space
-        for (int j = 0; j < (n - i - 1); j++)
-        {
+        for (int j = 0; j < i ; j++)
+        { 
             cout << " ";
         }
         cout << endl;
     }
+}
+
+
+void print9(int n){
+    print7(n);
+    print8(n);
 }
 
 int main(int argc, char const *argv[])
@@ -142,9 +150,11 @@ int main(int argc, char const *argv[])
         cin >> n;
         // print2(n);
 
-        print7(n);
+        // print8(n);
+        // print7(n);
+        print9(n);
 
-        cout << endl;
+        // cout << endl;
     }
 
     // print1(n);
