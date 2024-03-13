@@ -197,6 +197,24 @@ void print12(int n){
     
 }
 
+void print13(int n){
+    int num = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        // cols
+        for (int j = 1; j <= i; j++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        // newline
+        cout << endl;
+        
+    }
+    
+}
+
+
 int main(int argc, char const *argv[])
 {
     int t, n;
@@ -209,7 +227,7 @@ int main(int argc, char const *argv[])
         // print8(n);
         // print7(n);
         // print9(n);
-        print12(n);
+        print13(n);
         // print11(n);
 
         // cout << endl;
