@@ -215,6 +215,42 @@ void print13(int n){
 }
 
 
+void print14(int n){
+    // right angle triangle
+    for (int i = 0; i < n; i++){
+        for (char ch = 'A'; ch <= 'A'+i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    
+}
+void print15(int n){
+    // right angle triangle
+    for (int i = 0; i < n; i++){
+        for (char ch = 'A'; ch <= 'A'+ (n - i - 1); ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    
+}
+
+void print16(int n){
+        // right angle triangle
+    for (int i = 0; i < n; i++){
+        char ch = 'A'  + i;
+        for (int j=0; j <= i; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
+
 int main(int argc, char const *argv[])
 {
     int t, n;
@@ -222,18 +258,10 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < t; i++)
     {
         cin >> n;
-        // print2(n);
 
-        // print8(n);
-        // print7(n);
-        // print9(n);
-        print13(n);
-        // print11(n);
+        print16(n);
 
-        // cout << endl;
     }
-
-    // print1(n);
 
     return 0;
 }
