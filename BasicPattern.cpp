@@ -1,6 +1,9 @@
 #include "bits/stdc++.h"
 using namespace std;
 
+void newLine(){
+    cout << endl; 
+}
 void print1(int n)
 {
     for (int i = 0; i < n; i++)
@@ -164,7 +167,6 @@ void print11(int n){
     }
 }
 
-
 void print12(int n){
     // formula for space
     // 2 * ( n - 1 ) 
@@ -212,7 +214,6 @@ void print13(int n){
     }
     
 }
-
 
 void print14(int n){
     // right angle triangle
@@ -281,6 +282,20 @@ void print17(int n){
     }
 }
 
+void print18(int n){
+    // char c = ('A' + n) - 1;
+    char start = 'A' + n - 1;
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = start - i; ch <= start; ch++)
+        {
+            cout << ch << " ";
+        }
+        newLine();
+    }
+    
+}
+
 
 int main(int argc, char const *argv[])
 {
@@ -290,7 +305,7 @@ int main(int argc, char const *argv[])
     {
         cin >> n;
 
-        print17 (n);
+        print18  (n);
 
     }
 
