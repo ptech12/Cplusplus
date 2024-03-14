@@ -296,6 +296,95 @@ void print18(int n){
     
 }
 
+void print19(int n){
+    int iniS = 0;
+    for (int i = 0; i < n; i++)
+    { 
+        // stars (n - i) starts
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        
+
+        // space
+        for (int j = 0; j < iniS; j++)
+        {
+            cout << " ";
+        }
+        
+        // stars
+        for (int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        iniS += 2;
+        newLine();
+    }
+    iniS = (2 * n) - 2; // follow-up for reverse order
+    for (int i = 0; i < n; i++)
+    { 
+        // stars (n - i) starts
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "*";
+        }
+        
+
+        // space
+        for (int j = 0; j < iniS; j++)
+        {
+            cout << " ";
+        }
+        
+        // stars
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "*";
+        }
+        iniS -= 2;
+        newLine();
+    }    
+    
+}
+
+void print20(int n){
+    int spaces = 2 * n - 2;
+    for (int i = 1; i <= (2 * n) - 1; i++)
+    {
+        int stars = i;
+        if(i > n) stars = 2 * n - i;
+
+        // stars
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << '*';
+        }
+        
+        // space
+        for (int j = 1; j <= spaces ; j++)
+        {
+            cout << " ";
+        }
+        
+
+        // stars
+        for (int j = 1; j <= stars ; j++)
+        {
+            cout << '*';
+        }
+        newLine();
+        if(i < n) spaces -= 2;
+        else spaces += 2;
+
+    }
+    
+}
+
+
+
+
+
 
 int main(int argc, char const *argv[])
 {
@@ -305,7 +394,7 @@ int main(int argc, char const *argv[])
     {
         cin >> n;
 
-        print18  (n);
+        print21 (n);
 
     }
 
