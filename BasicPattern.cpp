@@ -383,7 +383,22 @@ void print20(int n){
 
 
 
-
+// square pattern
+void print21(int n){
+    // print n times
+    // for outer liiop
+    for (int i = 0; i < n; i++)
+    {
+        for(int j = 0; j<n; j++){
+            if(i==0 || j == 0 || i == n-1 || j == n-1){
+                cout << "*";
+            }
+            else cout << " ";
+        }
+        newLine();
+    }
+    
+}
 
 
 int main(int argc, char const *argv[])
