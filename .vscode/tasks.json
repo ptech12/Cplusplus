@@ -19,8 +19,19 @@
         {
             "label": "compile and run",
             "type": "shell",
-            "command": "g++ -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
+            "command": 
+            "g++ -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
             "group": "build"
+        },
+        {
+            "label": "compile and run patterns",
+            "type": "shell",
+            "command": 
+            "g++ -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}"
+              }
         }
     ]
 }
