@@ -38,7 +38,7 @@
             "label": "Run STL",
             "type": "shell",
             "command": 
-            "g++ -std=c++17 -o ${fileBasenameNoExtension}.out ${file} && ./${fileBasenameNoExtension} < ../input.txt > ../output.txt",
+            "g++ -std=c++17 -o ${fileBasenameNoExtension}.out ${file} && ./${fileBasenameNoExtension}.out < ../input.txt > ../output.txt",
             "group": "build",
             "options": {
                 "cwd": "${workspaceFolder}/STL"
