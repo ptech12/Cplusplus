@@ -78,6 +78,14 @@ void explainVectors() {
 
 }
 
+void printV(vector<int> v){
+    for (auto it : v){
+        cout << it << " ";
+    }
+    cout << endl;
+}
+
+
 void printingVector(){
     vector<int> v;
 
@@ -130,6 +138,18 @@ void printingVector(){
         cout << it << " ";
     }
 
+    // insert functions
+    vector<int> v2(2, 100);
+    cout << "\nPrint for insert functions" << endl;
+    printV(v2);
+    v2.insert(v2.begin(), 300);
+
+    cout << "Print after insert 300" << endl;
+    printV(v2);
+
+
+    
+    
 }
 
 
