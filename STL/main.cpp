@@ -47,9 +47,9 @@ void explainVectors() {
 
      
     //    container containing 5 intances of 100
-    vector<int> v(5, 100);
+    vector<int> v3(5, 100);
     // container of 5 instance with {0,0,0,0,0}
-    vector<int> v(5);
+    vector<int> v4(5);
 
     // container of 5 instance with {20, 20, 20, 20, 20}
     vector<int> v1(5, 20);
@@ -62,8 +62,73 @@ void explainVectors() {
 
     // Another method
     // using iterator
+    vector<int>::iterator it = v.begin();
+    // points towards to memory of the first element
     
+    // all is  contagious memory
+    it++; // move next memory
+    // inoder access from memory use pointer;
+    cout << *it << " ";
 
+    // another iterators
+    vector<int>::iterator it2 = v.end(); // move last element memory and next of it // do it-- before accessing it
+
+    // vector<int>::iterator it3 = v1.rend(); // moves in reverse
+    // vector<int>::iterator it4 = v.rbegin();
+
+}
+
+void printingVector(){
+    vector<int> v;
+
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+
+    // using iterator
+    for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
+        cout << *it << " ";
+    }
+
+    cout << endl << "Printing using auto" << endl;
+    // using auto
+    for (auto it = v.begin(); it != v.end(); it++)
+    {
+        cout << *it << " ";
+    }
+    
+    cout << endl << "Printing using for each loop" << endl;
+    
+    for(auto it : v){
+        cout << it << " ";
+    }
+
+    cout << "\nPrinting after earse using for each loop" << endl;
+
+    // earse functions
+    v.erase(v.begin() + 1);
+
+    for(auto it : v){
+        cout << it << " ";
+    }
+    vector<int> v1 = {10, 20, 30, 40, 50};
+    // erase couple of item
+    // erase one item and return next item address
+    cout << "\nPrinting v1" << endl;
+    for(auto it : v1){
+        cout << it << " ";
+    }
+    v1.erase(v1.begin() + 1);
+    cout << "\nPrinting v1 after v1.begin() + 1" << endl;
+    for(auto it : v1){
+        cout << it << " ";
+    }
+
+    v1.erase(v1.begin() + 2, v1.begin() + 4);
+    cout << "\nPrinting v1, v1.begin() + 2, v1.begin() + 4" << endl;
+    for(auto it : v1){
+        cout << it << " ";
+    }
 
 }
 
@@ -74,7 +139,8 @@ int main(int argc, char const *argv[])
     cin >> t;
     cin >> n;
     // print(t, n);
-    expainPair();
+    // explainVectors();
+    printingVector();
 
     return 0;
 }
