@@ -13,6 +13,10 @@ Printing v1, v1.begin() + 2, v1.begin() + 4
 10 30 
 Print for insert functions
 100 100 
-
 Print after insert 300
 300 100 100 
+
+ Vector before copy
+100 100 
+Prints the Size 2
+1

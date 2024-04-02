@@ -147,9 +147,30 @@ void printingVector(){
     cout << "Print after insert 300" << endl;
     printV(v2);
 
+    // copy functions
+    vector<int> prev(2, 100);
+    cout << "\n Vector before copy" << endl;
+    printV(prev);
+    vector<int> copy(2, 50);
+    // // copy 
+    // v.insert(prev.begin(), copy.begin(), copy.end());
+    // //Print after Copy
+    // cout << "\n After copy";
+    // printV(prev);
+    
+    // {10, 20}
+    cout << "Prints the Size " << v.size() << endl; // 2;
 
-    
-    
+    // {10, 20}
+    v.pop_back(); // 10;
+
+    //v1 => {10, 20}
+    //v2 => {30, 40}
+    v1.swap(v2); // v1 => {30, 40}, v2 => {10, 20};
+
+    v.clear(); // erases the entire vectors;
+
+    cout << v.empty();
 }
 
 
