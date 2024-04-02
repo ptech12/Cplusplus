@@ -83,6 +83,13 @@ void explainStack(){
 
 }
 
+void explainQueue() {
+    queue<int> q;
+    q.push(1); // 1
+    q.push(2);
+    // all operations are similar in
+}
+
 int main(int argc, char const *argv[])
 {
     

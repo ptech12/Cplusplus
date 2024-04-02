@@ -1,4 +1,2 @@
-5
-Top => 4
-Size => 4
-is Empty => 0
+Print top10
+Print top2
