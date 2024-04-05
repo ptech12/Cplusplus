@@ -1,2 +1,10 @@
-Print top10
-Print top2
+mpp
+Key Value
+ 1 	 2
+ 2 	 4
+
+map<pair<int, int>, int> mp1
+Key 	Value
+{2, 3} 	 10
+2
+0
