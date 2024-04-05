@@ -14,5 +14,6 @@
         "scoped_allocator": "cpp",
         "tuple": "cpp",
         "ostream": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
