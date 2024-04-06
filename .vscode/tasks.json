@@ -20,7 +20,7 @@
             "label": "compile and run",
             "type": "shell",
             "command": 
-            "g++ -std=c++17 -o ${fileBasenameNoExtension} ${file} && ./${fileBasenameNoExtension} < input.txt > output.txt",
+            "g++ -std=c++17 -o ${fileBasenameNoExtension}.out ${file} && ./${fileBasenameNoExtension}.out < input.txt > output.txt",
             "group": "build"
         },
         {
