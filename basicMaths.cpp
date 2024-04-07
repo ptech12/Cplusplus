@@ -5,6 +5,7 @@ using namespace std;
 void countDigits();
 void revereseDigits();
 void checkPalindrome();
+void checkArmStrong();
 
 
 int main(int argc, char const *argv[])
@@ -12,6 +13,7 @@ int main(int argc, char const *argv[])
     // countDigits();
     // revereseDigits();
     // checkPalindrome();
+    checkArmStrong();
 
     return 0;
 }
@@ -89,3 +91,20 @@ void checkPalindrome(){
 }
 
 
+void checkArmStrong(){
+    int n;
+    int sum = 0;
+    cin >> n;
+    int dup = n;
+
+    while (n){
+        int last = n % 10;
+        sum += (last * last * last);
+        n /= 10;
+    }
+    cout << "dup= " << dup << endl;
+    cout << "SUM= " << sum << endl;
+
+    cout << ((dup == sum) ? "true" : "false") << endl;
+    
+}
