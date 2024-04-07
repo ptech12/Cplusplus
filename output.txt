@@ -1,2 +1,3 @@
-Given: 1534236469
-Reverse: 1056389759
+dup= 153
+SUM= 153
+true

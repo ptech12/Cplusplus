@@ -6,11 +6,12 @@ void countDigits();
 void revereseDigits();
 void checkPalindrome();
 
+
 int main(int argc, char const *argv[])
 {
     // countDigits();
-    revereseDigits();
-
+    // revereseDigits();
+    // checkPalindrome();
 
     return 0;
 }
@@ -57,4 +58,34 @@ void revereseDigits(){
 }
 
 void checkPalindrome(){
+    int n;
+    int rev = 0;
+    cin >> n;
+    
+    // negative number is always not palindrome
+    if(n < 0){
+        cout << "false" << endl;
+        return;
+    }
+
+    // storing dup value
+    int dup = n;
+
+    while (n)
+    {
+        rev = (rev * 10) + (n % 10);
+        n /= 10;
+    }
+    // if(rev == dup) return true;
+
+    // return false;
+
+    cout << "dup= " << dup << endl;
+    cout << "rev= " << rev << endl;
+
+    cout << ((dup == rev) ? "true" : "false") << endl;
+    // if(rev == dup) cout << "true";
+    // else cout << "false";
 }
+
+
