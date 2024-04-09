@@ -6,14 +6,20 @@ void countDigits();
 void revereseDigits();
 void checkPalindrome();
 void checkArmStrong();
+void printDivisors(int n);
 
 
 int main(int argc, char const *argv[])
 {
+    int n;
+    cin >> n;
+
     // countDigits();
     // revereseDigits();
     // checkPalindrome();
-    checkArmStrong();
+    // checkArmStrong();
+    printDivisors(n);
+
 
     return 0;
 }
@@ -95,16 +101,37 @@ void checkArmStrong(){
     int n;
     int sum = 0;
     cin >> n;
+    // creating duplicate
     int dup = n;
+
+    // count digits
+    int cnt = 0;
+    int dupN = n;
+    while(dupN){
+        cnt++;
+        dupN /= 10;
+    }
+
 
     while (n){
         int last = n % 10;
-        sum += (last * last * last);
+        sum += pow(last, cnt);
         n /= 10;
     }
+
     cout << "dup= " << dup << endl;
     cout << "SUM= " << sum << endl;
 
     cout << ((dup == sum) ? "true" : "false") << endl;
     
+}
+
+void printDivisors(int n){
+    // TC => O(n)
+    cout << "Divisors of " << n << " is: " << endl;
+    for(int i=1; i<=n; i++){
+        if(n % i == 0){
+            cout << i << endl;
+        }
+    }
 }
