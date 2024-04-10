@@ -2,12 +2,42 @@
 
 using namespace std;
 
+using namespace std::chrono;
+
 void countDigits();
 void revereseDigits();
 void checkPalindrome();
 void checkArmStrong();
 void printDivisors(int n);
+void printDivisorsFast(int n);
 
+void countDown(int n, int func){
+
+    cout << "Timer start \n" << "Running function" << endl;
+    auto start = high_resolution_clock::now();
+    
+    switch (func)
+    {
+    case 1:
+        printDivisorsFast(n);
+        break;
+    case 2:
+        printDivisors(n);
+        break;
+    default:
+        break;
+    }
+
+    auto stop = high_resolution_clock::now();
+
+    cout << "Measuring time taken" << endl;
+
+    auto duration = duration_cast<microseconds>(stop - start);
+
+    cout << "Time Taken by printDivisors: " << endl;
+    cout << duration.count() << endl; 
+
+}
 
 int main(int argc, char const *argv[])
 {
@@ -18,11 +48,15 @@ int main(int argc, char const *argv[])
     // revereseDigits();
     // checkPalindrome();
     // checkArmStrong();
-    printDivisors(n);
-
+    // printDivisors(n);
+ 
+    // countDown(n, 2);
+    // countDown(n, 1);
 
     return 0;
 }
+
+
 
 
 
@@ -133,5 +167,31 @@ void printDivisors(int n){
         if(n % i == 0){
             cout << i << endl;
         }
+    }
+}
+
+
+void printDivisorsFast(int n){
+    cout << "Divisors of " << n << " is: " << endl;
+
+    // for sorted order
+    vector<int> divs;
+
+    // looping
+    for(int i = 1; i * i<= n; i++){
+        if(n % i == 0){
+            divs.push_back(i);
+
+            if( (n/i) != i) divs.push_back((n/i));
+        }
+    }
+
+    // sort
+    // O(n log n); n is number of factors
+    sort(divs.begin(), divs.end());
+
+    // printing
+    for(auto it : divs){
+        cout << it << endl;
     }
 }

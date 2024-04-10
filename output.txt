@@ -1,13 +1,30 @@
-Divisors of 23456 is: 
+Timer start 
+Running function
+Divisors of 36 is: 
 1
 2
+3
 4
-8
-16
-32
-733
-1466
-2932
-5864
-11728
-23456
+6
+9
+12
+18
+36
+Measuring time taken
+Time Taken by printDivisors: 
+61
+Timer start 
+Running function
+Divisors of 36 is: 
+1
+2
+3
+4
+6
+9
+12
+18
+36
+Measuring time taken
+Time Taken by printDivisors: 
+62
