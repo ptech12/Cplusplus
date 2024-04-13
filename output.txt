@@ -1,30 +1,18 @@
-Timer start 
-Running function
-Divisors of 36 is: 
-1
-2
-3
-4
-6
-9
-12
-18
-36
-Measuring time taken
-Time Taken by printDivisors: 
-61
-Timer start 
-Running function
-Divisors of 36 is: 
-1
-2
-3
-4
-6
-9
-12
-18
-36
-Measuring time taken
-Time Taken by printDivisors: 
-62
+******** Timer start ******** 
+Running function 
+********  OUTPUT ********
+11 is a Prime Number
+
+********  END OUTPUT ********
+******** Measuring time taken ********
+******** Time Taken ********
+******** 20 ********
+******** Timer start ******** 
+Running function 
+********  OUTPUT ********
+11 is a Prime Number
+
+********  END OUTPUT ********
+******** Measuring time taken ********
+******** Time Taken ********
+******** 12 ********

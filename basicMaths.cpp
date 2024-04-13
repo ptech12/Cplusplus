@@ -10,33 +10,28 @@ void checkPalindrome();
 void checkArmStrong();
 void printDivisors(int n);
 void printDivisorsFast(int n);
+void checkPrimeBruteForce(int n);
+void checkPrimeBySqrt(int n);
 
-void countDown(int n, int func){
+void countDown(int n, function<void(int)> func){
 
-    cout << "Timer start \n" << "Running function" << endl;
+
+    cout << "******** Timer start ******** \n" << "Running function " << endl;
     auto start = high_resolution_clock::now();
     
-    switch (func)
-    {
-    case 1:
-        printDivisorsFast(n);
-        break;
-    case 2:
-        printDivisors(n);
-        break;
-    default:
-        break;
-    }
+    cout << "********  OUTPUT ********" << endl;
+    func(n);
+    cout << "\n********  END OUTPUT ********" << endl;
 
     auto stop = high_resolution_clock::now();
 
-    cout << "Measuring time taken" << endl;
+    cout << "******** Measuring time taken ********" << endl;
 
     auto duration = duration_cast<microseconds>(stop - start);
 
-    cout << "Time Taken by printDivisors: " << endl;
-    cout << duration.count() << endl; 
-
+    cout << "******** Time Taken ********" << endl;
+    cout << "******** " << duration.count() <<  " ********" << endl;
+    // cout << func ;
 }
 
 int main(int argc, char const *argv[])
@@ -49,6 +44,10 @@ int main(int argc, char const *argv[])
     // checkPalindrome();
     // checkArmStrong();
     // printDivisors(n);
+
+    // checkPrimeBruteForce(n);
+    countDown(n, &checkPrimeBruteForce);
+    countDown(n, &checkPrimeBySqrt);
  
     // countDown(n, 2);
     // countDown(n, 1);
@@ -194,4 +193,31 @@ void printDivisorsFast(int n){
     for(auto it : divs){
         cout << it << endl;
     }
+}
+
+void checkPrimeBruteForce(int n)
+{
+    int cnt = 0;
+    // extreme brute force
+    for(int i=1; i <= n; i++){
+        if (n % i == 0) cnt++;
+    }
+    if(cnt == 2) cout << n << " is a Prime Number" << endl;
+    else cout << n << " is a Not a Prime Number" << endl;
+}
+
+void checkPrimeBySqrt(int n)
+{
+    int cnt = 0;
+    for (int i = 0; i * i < n; i++)
+    {
+        if(n % i == 0){
+            cnt++;
+            if(n / i != i) cnt++;
+        }
+    }
+
+    if(cnt == 2) cout << n << " is a Prime Number" << endl;
+    else cout << n << " is a Not a Prime Number" << endl;
+    
 }
