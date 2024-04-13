@@ -1,18 +1,1 @@
-******** Timer start ******** 
-Running function 
-********  OUTPUT ********
-11 is a Prime Number
-
-********  END OUTPUT ********
-******** Measuring time taken ********
-******** Time Taken ********
-******** 20 ********
-******** Timer start ******** 
-Running function 
-********  OUTPUT ********
-11 is a Prime Number
-
-********  END OUTPUT ********
-******** Measuring time taken ********
-******** Time Taken ********
-******** 12 ********
+20

@@ -12,6 +12,7 @@ void printDivisors(int n);
 void printDivisorsFast(int n);
 void checkPrimeBruteForce(int n);
 void checkPrimeBySqrt(int n);
+void gcd();
 
 void countDown(int n, function<void(int)> func){
 
@@ -36,8 +37,8 @@ void countDown(int n, function<void(int)> func){
 
 int main(int argc, char const *argv[])
 {
-    int n;
-    cin >> n;
+    // int n;
+    // cin >> n;
 
     // countDigits();
     // revereseDigits();
@@ -46,9 +47,10 @@ int main(int argc, char const *argv[])
     // printDivisors(n);
 
     // checkPrimeBruteForce(n);
-    countDown(n, &checkPrimeBruteForce);
-    countDown(n, &checkPrimeBySqrt);
- 
+    // countDown(n, &checkPrimeBruteForce);
+    // countDown(n, &checkPrimeBySqrt);
+    gcd();
+
     // countDown(n, 2);
     // countDown(n, 1);
 
@@ -219,5 +221,25 @@ void checkPrimeBySqrt(int n)
 
     if(cnt == 2) cout << n << " is a Prime Number" << endl;
     else cout << n << " is a Not a Prime Number" << endl;
+    
+}
+
+void gcd(){
+    int n1, n2, a, b;
+    cin >> a;
+    cin >> b;
+    // using eculidian algorithem
+    while (a > 0 && b > 0)
+    {
+        if(a > b)
+            a %= b;
+        else
+            b %= a;
+    }
+
+    if(a == b) 
+        cout << b;
+    else 
+        cout << a;
     
 }
