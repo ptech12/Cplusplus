@@ -44,5 +44,16 @@
                 "cwd": "${workspaceFolder}/STL"
               }
         }
+        ,
+        {
+            "label": "Run Recursion",
+            "type": "shell",
+            "command": 
+            "g++ -std=c++17 -o ${fileBasenameNoExtension}.out ${file} && ./${fileBasenameNoExtension}.out < ../input.txt > ../output.txt",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/recursion"
+              }
+        }
     ]
 }
