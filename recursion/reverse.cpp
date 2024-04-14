@@ -12,19 +12,44 @@ void rev(int i, int n, int arr[]){
 
 }
 
+/// @brief check palindrom of a string
+/// @param i loop item
+/// @param s actual string
+/// @return true if palindrome elase false
+bool palindrome(int i, string &s){
+    // base condition
+    if(i >= s.size() / 2) return true;
+
+    // check for opposite char
+    if(s[i] != s[s.size() - i -1]) return false;
+
+    // recursion
+    return palindrome(i + 1, s);
+
+}
+
 int main(int argc, char const *argv[])
 {
-    int n;
-    cin >> n;
-    int a[n];
-    for(int i=0; i<n; i++) cin >> a[i];
+    // int n;
+    // cin >> n;
+    // int a[n];
+    // for(int i=0; i<n; i++) cin >> a[i];
 
-    rev(0, n, a);
+    // rev(0, n, a);
 
-    for(auto i : a){
-        cout << i << " ";
-    }
+    // for(auto i : a){
+    //     cout << i << " ";
+    // }
+    // ! check palindrome of string
+    string s="MADAM";
+
+    if (palindrome(0, s) )
+    {
+        cout << true;
+        
+    }else cout << false;
+    
     
     
     return 0;
-} 
+}
