@@ -48,6 +48,15 @@
             "options": {
                 "cwd": "${workspaceFolder}/recursion"
             }
+        },
+        {
+            "label": "Run Hashing",
+            "type": "shell",
+            "command": "g++ -std=c++17 -g ${file} -o ${fileBasenameNoExtension}.out  && /usr/bin/time -lp ./${fileBasenameNoExtension}.out < ../input.txt > ../output.txt && rm *out && rm -r *out.dSYM",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/hashing"
+            }
         }
     ]
 }
