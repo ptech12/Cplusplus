@@ -57,6 +57,15 @@
             "options": {
                 "cwd": "${workspaceFolder}/hashing"
             }
+        },
+        {
+            "label": "Run Sorting",
+            "type": "shell",
+            "command": "g++ -std=c++17 -g ${file} -o ${fileBasenameNoExtension}.out  && /usr/bin/time -lp ./${fileBasenameNoExtension}.out < ../input.txt > ../output.txt && rm *out && rm -r *out.dSYM",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/sorting"
+            }
         }
     ]
 }
