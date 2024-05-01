@@ -1,2 +1,1 @@
-Second Largest: 6
-Second Smallest: 2
+1
